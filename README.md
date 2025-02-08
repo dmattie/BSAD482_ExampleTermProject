@@ -1,6 +1,8 @@
 # Global Water Security Analysis Project
 *A Decision Intelligence Approach to Understanding SDG 6*
 
+*By: Dave Mattie*
+
 ## Executive Summary
 This project analyzes global water security challenges through the lens of UN Sustainable Development Goal 6. Using comprehensive datasets from international organizations, we aim to identify patterns, predict trends, and recommend interventions to improve water access and management globally. Our analysis combines traditional statistical methods with advanced machine learning techniques to uncover insights about water security determinants and their relationships with other development indicators.
 
