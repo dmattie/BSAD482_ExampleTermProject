@@ -18,7 +18,7 @@
     <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
-  <repository-location id='WaterScarcity_17394071173560' path='/workbooks' revision='1.0' />
+  <repository-location id='WaterScarcity_17394071173560' path='/workbooks' revision='1.2' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -163,8 +163,11 @@
         </mapped-image>
       </mapped-images>
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
-        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/dmattie/Documents/projects/bsad482/termprojects/BSAD482_ExampleTermProject/data/Saudi Extract.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/dmattie/Documents/projects/bsad482/termprojects/BSAD482_ExampleTermProject/data/Saudi Extract.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='02/13/2025 12:37:57 AM' username='tableau_internal_user'>
           <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='Saudi Extract' increment-value='%null%' refresh-type='create' rows-inserted='6024' timestamp-start='2025-02-13 00:37:57.725' />
+          </refresh>
           <metadata-records>
             <metadata-record class='column'>
               <remote-name>Value</remote-name>
@@ -178,6 +181,7 @@
               <aggregation>Sum</aggregation>
               <approx-count>2429</approx-count>
               <contains-null>true</contains-null>
+              <object-id>[Extract (Extract.Extract)_D31C1E458DBB484A88372341B11EDF62]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Year</remote-name>
@@ -191,6 +195,7 @@
               <aggregation>Year</aggregation>
               <approx-count>57</approx-count>
               <contains-null>true</contains-null>
+              <object-id>[Extract (Extract.Extract)_D31C1E458DBB484A88372341B11EDF62]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Country Name</remote-name>
@@ -205,6 +210,7 @@
               <approx-count>190</approx-count>
               <contains-null>true</contains-null>
               <collation flag='1' name='LEN_RCA_S2' />
+              <object-id>[Extract (Extract.Extract)_D31C1E458DBB484A88372341B11EDF62]</object-id>
             </metadata-record>
           </metadata-records>
         </connection>
@@ -255,7 +261,7 @@
             <column datatype='string' name='[Country Name]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
             <column datatype='real' name='[Value]' role='measure' type='quantitative' />
             <column datatype='date' datatype-customized='true' name='[Year]' role='dimension' type='ordinal' />
-            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Value]' derivation='Avg' name='[avg:Value:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.0zlbh2v18s69cv1gxjqhy187837r].[Action (Country Name)]'>
@@ -268,7 +274,7 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='tick-color' field='[federated.0zlbh2v18s69cv1gxjqhy187837r].[sum:Value:qk]' value='#00000000' />
+            <format attr='tick-color' field='[federated.0zlbh2v18s69cv1gxjqhy187837r].[avg:Value:qk]' value='#00000000' />
           </style-rule>
         </style>
         <panes>
@@ -279,7 +285,7 @@
             <mark class='Automatic' />
           </pane>
         </panes>
-        <rows>[federated.0zlbh2v18s69cv1gxjqhy187837r].[sum:Value:qk]</rows>
+        <rows>[federated.0zlbh2v18s69cv1gxjqhy187837r].[avg:Value:qk]</rows>
         <cols>[federated.0zlbh2v18s69cv1gxjqhy187837r].[tyr:Year:qk]</cols>
       </table>
       <simple-id uuid='{4C958BB0-95C7-468B-9868-FFE57499FA92}' />
@@ -568,7 +574,7 @@
                       </zone-style>
                     </zone>
                     <zone h='76750' id='21' name='Line' show-title='false' w='55700' x='43500' y='22250'>
-                      <layout-cache minwidth='159' type-h='fixed' type-w='scalable' />
+                      <layout-cache minwidth='152' type-h='fixed' type-w='scalable' />
                       <zone-style>
                         <format attr='border-color' value='#000000' />
                         <format attr='border-style' value='none' />
@@ -593,9 +599,9 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='800' minheight='800' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='26' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='25' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
-                <zone h='5125' id='15' type-v2='title' w='98400' x='800' y='1000'>
+            <zone h='100000' id='36' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='35' param='vert' type-v2='layout-flow' w='95734' x='2133' y='1000'>
+                <zone h='5125' id='15' type-v2='title' w='95734' x='2133' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -604,7 +610,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone forceUpdate='true' h='4500' id='23' type-v2='text' w='98400' x='800' y='6125'>
+                <zone forceUpdate='true' h='8000' id='23' type-v2='text' w='95734' x='2133' y='6125'>
                   <formatted-text>
                     <run bold='true' fontsize='15'>Top 5 countries with severe water scarcity</run>
                   </formatted-text>
@@ -616,7 +622,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='82' forceUpdate='true' h='11250' id='24' type-v2='text' w='98400' x='800' y='10625'>
+                <zone fixed-size='82' forceUpdate='true' h='12875' id='24' type-v2='text' w='95734' x='2133' y='14125'>
                   <formatted-text>
                     <run fontcolor='#000000' fontname='Open Sans' fontsize='8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lobortis augue, non ultrices dolor. Morbi id rhoncus libero, auctor pulvinar tellus. Nam volutpat sit amet odio eget fermentum. Fusce faucibus sed est eget dignissim. Duis rhoncus enim nisi, vel interdum ex vehicula nec. In congue et erat at aliquet. Nulla nec aliquet erat.</run>
                     <run>Æ&#10;&#10;</run>
@@ -630,7 +636,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='76750' id='17' is-fixed='true' name='Map' show-title='false' w='42700' x='800' y='22250'>
+                <zone fixed-size='280' h='36000' id='17' is-fixed='true' name='Map' show-title='false' w='95734' x='2133' y='27000'>
                   <layout-cache minwidth='201' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -640,8 +646,8 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='76750' id='21' is-fixed='true' name='Line' show-title='false' w='55700' x='43500' y='22250'>
-                  <layout-cache minwidth='159' type-h='fixed' type-w='scalable' />
+                <zone fixed-size='280' h='36000' id='21' is-fixed='true' name='Line' show-title='false' w='95734' x='2133' y='63000'>
+                  <layout-cache minwidth='152' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -678,10 +684,34 @@
           <layer-control toolbar-button-enabled='false' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='15' />
+      <device-preview visible='true' />
       <simple-id uuid='{F9A6D788-382E-4301-AD60-EB6648A21B18}' />
     </window>
-    <window class='worksheet' name='Map'>
+    <window class='worksheet' hidden='true' name='Line'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{30AB3531-93C8-464D-BC21-43B4AFF3E522}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Map'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -710,29 +740,6 @@
         <layer-control toolbar-button-enabled='false' />
       </viewpoint>
       <simple-id uuid='{76B67EE3-854E-4E86-8029-ED16A874D271}' />
-    </window>
-    <window class='worksheet' name='Line'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{30AB3531-93C8-464D-BC21-43B4AFF3E522}' />
     </window>
   </windows>
 </workbook>

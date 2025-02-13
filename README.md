@@ -39,7 +39,7 @@ This project analyzes global water security challenges through the lens of UN Su
 
 ![Water Scarcity](img/WaterScarcity.png)
 
-<a href="https://public.tableau.com/views/WaterScarcity_17394071173560/WaterScarcity?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link">
+<a href="https://public.tableau.com/views/WaterScarcity_17394071173560/WaterStressLevel?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link">
     <img src="img/view-on-tableau-public.png" alt="View on Tableau Public" height="30" >
 </a>
 
